@@ -277,24 +277,34 @@ function App() {
       </div>
 
       {/* MAIN VIEW */}
-      <div style={{
-        flex: 1, display: 'flex', flexDirection: 'column', width: '100%',
-        transition: 'all 0.6s cubic-bezier(0.19, 1, 0.22, 1)',
-        filter: menuOpen ? 'blur(8px) brightness(0.6) grayscale(0.5)' : 'none',
-        transform: menuOpen ? 'scale(0.98)' : 'none',
-        pointerEvents: menuOpen ? 'none' : 'auto'
-      }}>
+      <div
+        key={view}
+        style={{
+          flex: 1, display: 'flex', flexDirection: 'column', width: '100%',
+          transition: 'all 0.6s cubic-bezier(0.19, 1, 0.22, 1)',
+          filter: menuOpen ? 'blur(8px) brightness(0.6) grayscale(0.5)' : 'none',
+          transform: menuOpen ? 'scale(0.98)' : 'none',
+          pointerEvents: menuOpen ? 'none' : 'auto',
+          animation: 'fadeIn 0.8s ease-out forwards',
+          overflow: 'hidden'
+        }}
+      >
         {view === 'dashboard' ? renderDashboard() : renderHighlights()}
       </div>
 
       <style>{`
+        @keyframes fadeIn {
+          from { opacity: 0; transform: translateY(10px) scale(0.99); }
+          to { opacity: 1; transform: translateY(0) scale(1); }
+        }
         .tab-button:hover {
           background: rgba(125, 211, 252, 0.1) !important;
           border-color: #7dd3fc !important;
         }
-        *::-webkit-scrollbar { width: 4px; }
+        *::-webkit-scrollbar { width: 6px; }
         *::-webkit-scrollbar-track { background: transparent; }
         *::-webkit-scrollbar-thumb { background: #7dd3fc33; border-radius: 10px; }
+        *::-webkit-scrollbar-thumb:hover { background: #7dd3fc66; }
       `}</style>
     </div>
   );
