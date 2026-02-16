@@ -1,16 +1,17 @@
-# React + Vite
+# STARBASE | Starward Command 🛰️✨
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A high-performance cosmic dashboard tracking interstellar telemetry, deep-space news, and upcoming planetary launches.
 
-Currently, two official plugins are available:
+## 🛰️ Navigation Systems
+- **COSM_CHRON**: Real-time Starlink feed for spaceflight news.
+- **NASA DEEP INTEL**: Infrared survey data and daily astronomical imagery.
+- **LAUNCH_INIT**: Trajectory tracking for upcoming rocket launches.
+- **WISE_IR MAP**: Deep sky navigation powered by the AllWISE Infrared Survey.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🛠️ Technology
+- **Engine**: React + Vite
+- **Mapping**: Leaflet.js
+- **Telemetry Sources**: NASA APOD, Spaceflight News API, AllWISE Survey, RocketLaunch.live API.
 
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+*Operational Status: [ACTIVE]*
